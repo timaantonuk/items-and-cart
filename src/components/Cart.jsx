@@ -27,7 +27,7 @@ function Cart() {
       open={userProgressCtx.progress === 'cart'}
       onClose={userProgressCtx.progress === 'cart' ? handleCloseCart : null}>
 
-      <h2>Your Cart</h2>
+      <h2 className='cart-title'>Your Cart</h2>
 
       <ul>
         {cartCtx.items.map(item =>
@@ -36,18 +36,24 @@ function Cart() {
             name={item.name}
             quantity={item.quantity}
             price={item.price}
+            img={item.image}
             onIncrease={() => cartCtx.addItem(item)}
             onDecrease={() => cartCtx.removeItem(item.id)} />
         )}
       </ul>
 
-      <p className="cart-total">{currencyFormatter.format(cartTotal)}</p>
+
       <p className="modal-actions">
-        <Button textOnly onClick={handleCloseCart}>
+
+        <p className="cart-total">Total: {currencyFormatter.format(cartTotal)}</p>
+
+        <div className='modal-wrapper'>
+          <Button textOnly onClick={handleCloseCart}>
           Close
         </Button>
 
-        {cartCtx.items.length > 0 && <Button onClick={handleGoToCheckout}> Go to Checkout </Button>}
+          {cartCtx.items.length > 0 && <Button onClick={handleGoToCheckout}> Go to Checkout </Button>}
+        </div>
 
 
       </p>

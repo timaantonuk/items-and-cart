@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import logoImg from '../assets/logo.jpg';
+import logoImg from '../assets/logo.png';
 import Button from './UI/Button.jsx';
 import CartContext from '../store/CartContext.jsx';
 import UserProgressContext from '../store/UserProgressContext.jsx';
+import { BsFillHandbagFill } from 'react-icons/bs';
 
 function Header() {
   const cartCtx = useContext(CartContext);
@@ -19,11 +20,14 @@ function Header() {
   return (
     <header id="main-header">
       <div id="title">
-        <img src={logoImg} alt="react food logo" />
-        <h1>ReactFood</h1>
+        <img src={logoImg} alt="sneaker geek logo"/>
+        <h1>SneakerGeek</h1>
       </div>
 
-      <nav>
+      <nav className='nav'>
+
+        <BsFillHandbagFill style={{width: '40px', height: '40px', color: '#0c0c0c', cursor: 'pointer'}} onClick={handleShowCart}/>
+
         <Button textOnly onClick={handleShowCart}>
           Cart ({totalCartItems})
         </Button>

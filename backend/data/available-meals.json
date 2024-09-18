@@ -1,142 +1,170 @@
 [
   {
     "id": "m1",
-    "name": "Mac & Cheese",
-    "price": "8.99",
-    "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
-    "image": "images/mac-and-cheese.jpg"
+    "name": "Urban Runner",
+    "price": "49.99",
+    "description": "Lightweight and stylish sneakers for everyday wear.",
+    "image": "images/sneaker-1.jpg",
+    "sizes": [40, 42, 44]
   },
   {
     "id": "m2",
-    "name": "Margherita Pizza",
-    "price": "12.99",
-    "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Fusion Glide",
+    "price": "199.99",
+    "description": "High-performance sneakers with a sleek design for sports.",
+    "image": "images/sneaker-2.jpg",
+    "sizes": [39, 41, 45]
   },
   {
     "id": "m3",
-    "name": "Caesar Salad",
-    "price": "7.99",
-    "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
-    "image": "images/caesar-salad.jpg"
+    "name": "Trail Breeze",
+    "price": "89.99",
+    "description": "Comfortable sneakers perfect for hiking and outdoor activities.",
+    "image": "images/sneaker-3.jpg",
+    "sizes": [38, 40, 43]
   },
   {
     "id": "m4",
-    "name": "Spaghetti Carbonara",
-    "price": "10.99",
-    "description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
-    "image": "images/spaghetti-carbonara.jpg"
+    "name": "Velocity Sprint",
+    "price": "74.99",
+    "description": "Engineered for speed, these sneakers enhance your performance.",
+    "image": "images/sneaker-4.jpg",
+    "sizes": [41, 43, 46]
   },
   {
     "id": "m5",
-    "name": "Veggie Burger",
-    "price": "9.99",
-    "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
-    "image": "images/veggie-burger.jpg"
+    "name": "Aero Stride",
+    "price": "179.99",
+    "description": "Breathable and cushioned for comfort during long runs.",
+    "image": "images/sneaker-5.jpg",
+    "sizes": [40, 42, 44]
   },
   {
     "id": "m6",
-    "name": "Grilled Chicken Sandwich",
-    "price": "10.99",
-    "description": "Tender grilled chicken breast with avocado, bacon, lettuce, and honey mustard on a toasted bun.",
-    "image": "images/grilled-chicken-sandwich.jpg"
+    "name": "Midnight Edge",
+    "price": "299.99",
+    "description": "Stylish black sneakers for a casual urban look.",
+    "image": "images/sneaker-6.jpg",
+    "sizes": [41, 44, 47]
   },
   {
     "id": "m7",
-    "name": "Steak Frites",
-    "price": "17.99",
-    "description": "Succulent steak cooked to your preference, served with crispy golden fries and herb butter.",
-    "image": "images/steak-frites.jpg"
+    "name": "Pulse Wave",
+    "price": "129.99",
+    "description": "Dynamic sneakers designed for high-impact workouts.",
+    "image": "images/sneaker-7.jpg",
+    "sizes": [40, 43, 45]
   },
   {
     "id": "m8",
-    "name": "Sushi Roll Platter",
-    "price": "15.99",
-    "description": "An assortment of fresh sushi rolls including California, Spicy Tuna, and Eel Avocado.",
-    "image": "images/sushi-roll-platter.jpg"
+    "name": "Street Flex",
+    "price": "109.99",
+    "description": "Versatile sneakers for streetwear and active lifestyles.",
+    "image": "images/sneaker-8.jpg",
+    "sizes": [39, 41, 44]
   },
   {
     "id": "m9",
-    "name": "Chicken Curry",
-    "price": "13.99",
-    "description": "Tender pieces of chicken simmered in a rich and aromatic curry sauce, served with basmati rice.",
-    "image": "images/chicken-curry.jpg"
+    "name": "Element Shift",
+    "price": "149.99",
+    "description": "Waterproof and durable for all-weather adventures.",
+    "image": "images/sneaker-9.jpg",
+    "sizes": [42, 44, 46]
   },
   {
     "id": "m10",
-    "name": "Vegan Buddha Bowl",
-    "price": "11.99",
-    "description": "A hearty bowl filled with quinoa, roasted veggies, avocado, and a tahini dressing.",
-    "image": "images/vegan-buddha-bowl.jpg"
+    "name": "Wave Surge",
+    "price": "89.99",
+    "description": "Stylish and sporty designed for both comfort and performance.",
+    "image": "images/sneaker-10.jpg",
+    "sizes": [38, 40, 42]
   },
   {
     "id": "m11",
-    "name": "Seafood Paella",
-    "price": "19.99",
-    "description": "A Spanish delicacy filled with saffron-infused rice, shrimp, mussels, and chorizo.",
-    "image": "images/seafood-paella.jpg"
+    "name": "Zen Motion",
+    "price": "139.99",
+    "description": "Lightweight and flexible sneakers ideal for yoga and training.",
+    "image": "images/sneaker-11.jpg",
+    "sizes": [39, 42, 44]
   },
   {
     "id": "m12",
-    "name": "Pancake Stack",
-    "price": "8.99",
-    "description": "Fluffy pancakes stacked high, drizzled with maple syrup and topped with fresh berries.",
-    "image": "images/pancake-stack.jpg"
+    "name": "Phantom Boost",
+    "price": "229.99",
+    "description": "High-performance sneakers with advanced shock absorption.",
+    "image": "images/sneaker-12.jpg",
+    "sizes": [41, 44, 46]
   },
   {
     "id": "m13",
-    "name": "Miso Ramen",
-    "price": "12.99",
-    "description": "A warming bowl of ramen with miso broth, tender pork, soft-boiled egg, and green onions.",
-    "image": "images/miso-ramen.jpg"
+    "name": "Lunar Sprint",
+    "price": "349.99",
+    "description": "Designed for marathon runners, with maximum support.",
+    "image": "images/sneaker-13.jpg",
+    "sizes": [40, 42, 45]
   },
   {
     "id": "m14",
-    "name": "Beef Tacos",
-    "price": "9.99",
-    "description": "Three soft tortillas filled with seasoned beef, fresh salsa, cheese, and sour cream.",
-    "image": "images/beef-tacos.jpg"
+    "name": "Vortex Dash",
+    "price": "89.99",
+    "description": "Affordable sneakers with a sleek design for casual wear.",
+    "image": "images/sneaker-14.jpg",
+    "sizes": [38, 41, 44]
   },
   {
     "id": "m15",
-    "name": "Chocolate Brownie",
-    "price": "5.99",
-    "description": "A rich and fudgy brownie, topped with a scoop of vanilla ice cream and chocolate sauce.",
-    "image": "images/chocolate-brownie.jpg"
+    "name": "Cloud Stride",
+    "price": "279.99",
+    "description": "Super-cushioned sneakers for an ultra-smooth ride.",
+    "image": "images/sneaker-15.jpg",
+    "sizes": [40, 42, 44]
   },
   {
     "id": "m16",
-    "name": "Lobster Bisque",
-    "price": "14.99",
-    "description": "A creamy soup made from lobster stock, aromatic vegetables, and a touch of brandy.",
-    "image": "images/lobster-bisque.jpg"
+    "name": "Nova Trek",
+    "price": "239.99",
+    "description": "Rugged sneakers built for long-distance trekking.",
+    "image": "images/sneaker-16.jpg",
+    "sizes": [41, 43, 46]
   },
   {
     "id": "m17",
-    "name": "Mushroom Risotto",
-    "price": "13.99",
-    "description": "Creamy Arborio rice cooked with a medley of wild mushrooms and finished with parmesan.",
-    "image": "images/mushroom-risotto.jpg"
+    "name": "Turbo Sprint",
+    "price": "299.99",
+    "description": "High-speed sneakers designed for track and field athletics.",
+    "image": "images/sneaker-17.jpg",
+    "sizes": [39, 42, 45]
   },
   {
     "id": "m18",
-    "name": "Eggplant Parmesan",
-    "price": "11.99",
-    "description": "Layers of breaded eggplant, marinara sauce, and melted mozzarella and parmesan cheeses.",
-    "image": "images/eggplant-parmesan.jpg"
+    "name": "Echo Swift",
+    "price": "119.99",
+    "description": "Lightweight sneakers designed for quick movements and agility.",
+    "image": "images/sneaker-18.jpg",
+    "sizes": [38, 40, 42]
   },
   {
     "id": "m19",
-    "name": "Lemon Cheesecake",
-    "price": "6.99",
-    "description": "A creamy cheesecake with a tangy lemon flavor, served on a crumbly biscuit base.",
-    "image": "images/lemon-cheesecake.jpg"
+    "name": "Orbit Blaze",
+    "price": "159.99",
+    "description": "Premium sneakers for those who demand style and performance.",
+    "image": "images/sneaker-19.jpg",
+    "sizes": [39, 41, 44]
   },
   {
     "id": "m20",
-    "name": "Falafel Wrap",
-    "price": "8.99",
-    "description": "Crispy falafels wrapped in a warm pita with lettuce, tomatoes, and a tahini sauce.",
-    "image": "images/falafel-wrap.jpg"
+    "name": "Zenith Pulse",
+    "price": "399.99",
+    "description": "Top-tier sneakers with cutting-edge technology for athletes.",
+    "image": "images/sneaker-20.jpg",
+    "sizes": [42, 44, 46]
+  },
+  {
+    "id": "m21",
+    "name": "Devian Rose",
+    "price": "69.99",
+    "description": "Aesthetic rose boots for style and comfort.",
+    "image": "images/sneaker-21.jpg",
+    "sizes": [38, 40, 42]
   }
 ]

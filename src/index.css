@@ -9,10 +9,12 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#29251c, #2c2306);
+  background: linear-gradient(#e8e8e8, #cbcbcb);
   color: #d9e2f1;
   min-height: 100vh;
 }
+
+
 
 #main-header {
   display: flex;
@@ -32,20 +34,22 @@ body {
   height: 4rem;
   object-fit: contain;
   border-radius: 50%;
-  border: 2px solid #ffc404;
+  border: 2px solid #0c0c0c;
 }
 
 #main-header button {
   font-size: 1.5rem;
-  font-family: 'Lato', sans-serif;
+  transform: translateY(4px);
+  font-weight: bold;
+  /*font-family: 'Lato', sans-serif;*/
 }
 
 h1 {
-  font-family: 'Lato', sans-serif;
+  /*font-family: 'Lato', sans-serif;*/
   font-weight: 700;
   font-size: 2rem;
   margin: 0;
-  color: #ffc404;
+  color: #0c0c0c;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
@@ -62,7 +66,8 @@ h1 {
 }
 
 .meal-item {
-  background-color: #1d1a16;
+  position: relative;
+  background-color: #0c0c0c;
   border-radius: 1rem;
   overflow: hidden;
   text-align: center;
@@ -74,6 +79,26 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.meal-item-sizes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.meal-item-size {
+  display: block;
+  padding: 7px;
+  background-color: #606060;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.meal-item-size:hover {
+  background-color: #3f3f3f;
+  scale: 1.1
 }
 
 .meal-item img {
@@ -94,8 +119,8 @@ h1 {
 
 .meal-item-price {
   display: inline-block;
-  background-color: #312c1d;
-  color: #ffc404;
+  background-color: #606060;
+  color: #ffffff;
   font-size: 0.9rem;
   font-weight: bold;
   padding: 0.5rem 2rem;
@@ -117,14 +142,36 @@ h1 {
   padding: 0;
 }
 
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .modal-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding-inline: 20px;
+  align-items: center;
   gap: 1rem;
 }
 
+.modal-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-actions button {
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding-block: 20px;
+
+}
+
 .modal-actions .text-button {
-  color: #1d1a16;
+  color: #0c0c0c;
 }
 
 .modal-actions .text-button:hover,
@@ -132,11 +179,16 @@ h1 {
   color: #312c1d;
 }
 
+.cart-title {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
 .cart-total {
   display: flex;
   justify-content: flex-end;
   margin: 2rem 0;
-  font-size: 1.15rem;
+  font-size: 22px;
   font-weight: bold;
   color: #46443c;
 }
@@ -145,7 +197,24 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.cart-item p {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #0c0c0c;
+
 }
 
 .cart-item p {
@@ -160,13 +229,13 @@ h1 {
 
 .cart-item-actions button {
   cursor: pointer;
-  font-size: 1rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
   border: none;
-  background-color: #312c1d;
-  color: #ffc404;
+  background-color: #606060;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,7 +244,7 @@ h1 {
 .cart-item-actions button:hover,
 .cart-item-actions button:active {
   background-color: #1d1a16;
-  color: #ffab04;
+  color: #ffffff;
 }
 
 .control {
@@ -207,18 +276,18 @@ h1 {
 .button {
   font: inherit;
   cursor: pointer;
-  background-color: #ffc404;
-  border: 1px solid #ffc404;
-  color: #1f1a09;
+  background-color: #606060;
+  border: 1px solid #000000;
+  color: #ffffff;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
+  transition: all .2s;
 }
 
 .button:hover,
 .button:active {
-  background-color: #ffab04;
-  border-color: #ffab04;
-  color: #1f1a09;
+  background-color: #3f3f3f;
+  scale: 1.1
 }
 
 .text-button {
@@ -226,12 +295,12 @@ h1 {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  color: #ffc404;
+  color: #0c0c0c;
 }
 
 .text-button:hover,
 .text-button:active {
-  color: #ffab04;
+  color: #606060;
 }
 
 .modal {
@@ -251,6 +320,29 @@ h1 {
 
 .center {
   text-align: center;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  min-width: 200px;
+  transform: translate(50%, -90%);
+  background-color: #333;
+  color: white;
+  padding-block: 30px;
+  padding-inline: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  opacity: 0; /* Начальная прозрачность */
+  transform: translate(50%, -100%); /* Начальная позиция (немного выше) */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Анимация плавного появления */
+}
+
+.popup.show {
+  opacity: 1; /* Прозрачность 100% */
+  transform: translate(50%, -90%); /* Позиция окна */
 }
 
 .error {

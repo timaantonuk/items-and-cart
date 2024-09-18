@@ -1,11 +1,15 @@
 import React from 'react';
 import { currencyFormatter } from '../util/formatting.js';
 
-function CartItem({name, quantity, price, onIncrease, onDecrease}) {
+function CartItem({name, quantity, price, img, onIncrease, onDecrease}) {
   return (
     <li className='cart-item'>
-      <p>{name} - {quantity} x {currencyFormatter.format(price)}</p>
-      <p className='cart-item-actions'>
+
+
+      <p>
+        <img src={`../../backend/public/${img}`} alt="cart sneaker image" className="cart-image" />
+        {name} - {quantity} x {currencyFormatter.format(price)}</p>
+      <p className="cart-item-actions">
         <button onClick={onDecrease}>-</button>
         <span>{quantity}</span>
         <button onClick={onIncrease}>+</button>
