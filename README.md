@@ -18,7 +18,3 @@ A Modern e-commerce platform designed for sneaker enthusiasts. The application a
 - Checkout functionality
 - Choose size
 - Calculate total amount
-
-## Demo:
-
-Demo link - https://tranquil-vacherin-793e6a.netlify.app/
