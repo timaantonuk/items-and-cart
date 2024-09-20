@@ -7,7 +7,7 @@ function CartItem({name, quantity, price, img, onIncrease, onDecrease}) {
 
 
       <p>
-        <img src={`../../backend/public/${img}`} alt="cart sneaker image" className="cart-image" />
+        <img src={`http://localhost:3000/images/${img}`} alt="cart sneaker image" className="cart-image" />
         {name} - {quantity} x {currencyFormatter.format(price)}</p>
       <p className="cart-item-actions">
         <button onClick={onDecrease}>-</button>
