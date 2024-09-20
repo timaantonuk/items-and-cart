@@ -8,6 +8,7 @@ import Button from './UI/Button.jsx';
 import UserProgressContext from '../store/UserProgressContext.jsx';
 import useHttp from '../hooks/useHttp.js';
 import Error from './Error.jsx';
+import { TbTruckDelivery } from 'react-icons/tb';
 
 const requestConfig = {
   method: 'POST',
@@ -78,15 +79,19 @@ export default function Checkout() {
         open={userProgressCtx.progress === 'checkout'}
         onClose={handleFinish}
       >
-        <h2>Success!</h2>
-        <p>Your order was submitted successfully.</p>
-        <p>
-          We will get back to you with more details via email within the next
-          few minutes.
-        </p>
-        <p className="modal-actions">
-          <Button onClick={handleFinish}>Okay</Button>
-        </p>
+
+        <div className='success'><h2>Success!</h2>
+          <div>
+            <TbTruckDelivery style={{ width: '200px', height: '200px' }} />
+          </div>
+          <p>Your order was submitted successfully.</p>
+          <p>
+            We will get back to you with more details via email within the next
+            few minutes.
+          </p>
+          <p className="modal-actions success-actions">
+            <Button onClick={handleFinish}>Okay</Button>
+          </p></div>
       </Modal>
     );
   }

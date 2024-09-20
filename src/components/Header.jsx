@@ -20,8 +20,8 @@ function Header() {
   return (
     <header id="main-header">
       <div id="title">
-        <img src={logoImg} alt="sneaker geek logo"/>
-        <h1>SneakerGeek</h1>
+        <a href='#'><img src={logoImg} alt="sneaker geek logo" /></a>
+        <a href='#'><h1>SneakerGeek</h1></a>
       </div>
 
       <nav className='nav'>

@@ -5,6 +5,7 @@ import { currencyFormatter } from '../util/formatting.js';
 import Button from './UI/Button.jsx';
 import UserProgressContext from '../store/UserProgressContext.jsx';
 import CartItem from './CartItem.jsx';
+import { RiEmotionSadFill } from 'react-icons/ri';
 
 function Cart() {
 
@@ -27,7 +28,7 @@ function Cart() {
       open={userProgressCtx.progress === 'cart'}
       onClose={userProgressCtx.progress === 'cart' ? handleCloseCart : null}>
 
-      <h2 className='cart-title'>Your Cart</h2>
+      <h2 className="cart-title">Your Cart</h2>
 
       <ul>
         {cartCtx.items.map(item =>
@@ -42,15 +43,19 @@ function Cart() {
         )}
       </ul>
 
+      {cartCtx.items.length > 0 ? '' :
+        <div className="modal-empty-wrapper"><RiEmotionSadFill style={{ width: '50px', height: '50px' }} />
+          <p className="modal-empty">No items</p>
+          <RiEmotionSadFill style={{ width: '50px', height: '50px' }} /></div>}
 
       <p className="modal-actions">
 
         <p className="cart-total">Total: {currencyFormatter.format(cartTotal)}</p>
 
-        <div className='modal-wrapper'>
+        <div className="modal-wrapper">
           <Button textOnly onClick={handleCloseCart}>
-          Close
-        </Button>
+            Close
+          </Button>
 
           {cartCtx.items.length > 0 && <Button onClick={handleGoToCheckout}> Go to Checkout </Button>}
         </div>

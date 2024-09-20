@@ -14,7 +14,14 @@ body {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
 
+}
+
+input:active, input:focus {
+  outline: none;
+}
 
 #main-header {
   display: flex;
@@ -27,6 +34,15 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
+  cursor: pointer;
+
+}
+
+@media screen and (max-width: 768px) {
+  #main-header {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 #main-header #title img {
@@ -62,7 +78,8 @@ h1 {
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1rem;
+  column-gap: .7rem;
+  row-gap: 2rem;
 }
 
 .meal-item {
@@ -72,6 +89,12 @@ h1 {
   overflow: hidden;
   text-align: center;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  transition: all .3s;
+}
+
+.meal-item:hover {
+  box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(-15px);
 }
 
 .meal-item article {
@@ -99,6 +122,10 @@ h1 {
 .meal-item-size:hover {
   background-color: #3f3f3f;
   scale: 1.1
+}
+
+.selected-size {
+  background-color: #3f3f3f
 }
 
 .meal-item img {
@@ -156,6 +183,19 @@ h1 {
   gap: 1rem;
 }
 
+.modal-empty-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-empty {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
 .modal-wrapper {
   display: flex;
   gap: 20px;
@@ -165,7 +205,7 @@ h1 {
   font-size: 20px;
   font-weight: bold;
   border: none;
-  border-radius: 10px;
+  border-radius: 30px;
   padding-block: 20px;
 
 }
@@ -182,6 +222,7 @@ h1 {
 .cart-title {
   font-size: 30px;
   padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 .cart-total {
@@ -190,7 +231,7 @@ h1 {
   margin: 2rem 0;
   font-size: 22px;
   font-weight: bold;
-  color: #46443c;
+  color: #0c0c0c;
 }
 
 .cart-item {
@@ -203,6 +244,7 @@ h1 {
 .cart-item p {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
+  color: #0c0c0c;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -232,9 +274,9 @@ h1 {
   font-size: 20px;
   width: 50px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 30px;
   border: none;
-  background-color: #606060;
+  background-color: #0c0c0c;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -251,6 +293,7 @@ h1 {
   margin: 0.5rem 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .control label {
@@ -260,14 +303,15 @@ h1 {
 
 .control input {
   width: 100%;
-  max-width: 20rem;
+  min-height: 50px;
+  border-radius: 20px;
   font: inherit;
   padding: 0.5rem;
-  border-radius: 4px;
   border: 1px solid #ccc;
 }
 
 .control-row {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
@@ -276,7 +320,7 @@ h1 {
 .button {
   font: inherit;
   cursor: pointer;
-  background-color: #606060;
+  background: #0c0c0c;
   border: 1px solid #000000;
   color: #ffffff;
   padding: 0.5rem 1.5rem;
@@ -284,10 +328,14 @@ h1 {
   transition: all .2s;
 }
 
+.meal-item-actions button {
+  background-color: #606060;
+}
+
 .button:hover,
 .button:active {
-  background-color: #3f3f3f;
-  scale: 1.1
+  background-color: #2d2d2d;
+  scale: 1.03
 }
 
 .text-button {
@@ -304,7 +352,7 @@ h1 {
 }
 
 .modal {
-  background-color: #e4ddd4;
+  background-color: #ffffff;
   border-radius: 6px;
   border: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
@@ -361,6 +409,58 @@ h1 {
 
 .error p {
   margin: 0;
+}
+
+.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.success h2 {
+  font-size: 30px;
+}
+
+.success p:first-of-type {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.success-actions {
+  width: 100%;
+}
+
+.success-actions button {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-actions button {
+    font-size: 15px;
+  }
+
+  .cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .cart-item-actions {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @keyframes fade-slide-up {
